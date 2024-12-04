@@ -16,6 +16,6 @@ const processText = (text, {uppercase = false, reverse = false, removeSpecialCha
 }
 const text = "tE$StOWY&&"
 
-processText(text, {uppercase: false, reverse: true, removeSpecialChars: true})
+processText(text, {uppercase: true, reverse: false, removeSpecialChars: true})
 
 

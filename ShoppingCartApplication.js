@@ -4,29 +4,30 @@ class Cart{
         this.cena = cena
         this.ilosc = ilosc
     }
-    addProduct(...products){
-        this.lista.push(...products, this.cena, this.ilosc)
+    addProduct(newProduct){
+        this.lista.push(newProduct)
+        console.log(this.lista)
 
         
     }
     
-    removeProduct(n,c,i){
-        this.lista = this.lista.filter(x => x !== n) //filtruje liste i pokazuje bez podanego slowa
-        this.lista = this.lista.filter(x=> x !== c)
-        this.lista = this.lista.filter(x => x !== i)
-    }
+    // removeProduct(n,c,i){
+    //     this.lista = this.lista.filter(x => x !== n) //filtruje liste i pokazuje bez podanego slowa
+    //     this.lista = this.lista.filter(x=> x !== c)
+    //     this.lista = this.lista.filter(x => x !== i)
+    // }
 
     pokazListe(){
-        console.log(`lista produktow: ${this.lista}`)
+        this.lista.forEach(p => console.log(`${p.name}, ${p.cena}`))
     }
 }
 const koszyk = new Cart()
 
-koszyk.addProduct("woda", 5, 1)
-koszyk.addProduct("zeszyt", 5, 1)
-koszyk.addProduct("długopis", 2, 1)
+koszyk.addProduct({name:"woda", cena:5, ilosc:1})
+koszyk.addProduct({name:"zeszyt", cena:5, ilosc:1})
+koszyk.addProduct({name:"długopis", cena:2, ilosc:1})
 
-koszyk.removeProduct("długopis", 2, 1)
+// koszyk.removeProduct("długopis", 2, 1)
 
 
 koszyk.pokazListe()

@@ -19,3 +19,4 @@ const scores = students.map((student) => student.wynik)
 console.log(`srednia wynosi: ${srednia(scores)}`)
 console.log(`najmniejszy wynik to: ${min(scores)}`)
 console.log(`najwiekszy wynik to: ${max(scores)}`)
+let a = [97,40]

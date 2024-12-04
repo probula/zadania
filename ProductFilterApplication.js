@@ -16,6 +16,7 @@ const cena2 = [...products].sort(function(a,b){ //trzeba zrobic spread bo inacze
 const kategoria = products.filter(function(cat){
     return cat.category == "pieczywo"
 })
+console.log(kategoria)
 
 console.log("---Produkty posortowane od najtanszych: ---")
 cena1.forEach(ele => console.log(`Nazwa: ${ele.name}, Cena: ${ele.price}, Kategoria: ${ele.category}`))
